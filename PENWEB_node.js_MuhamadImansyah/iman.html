@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disal Banten</title>
+    <link rel="stylesheet" href="disal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img class="logo" src="your-logo-url.png" alt="Logo">
+        <h1>JAWARA ALERT</h1>
+        <nav>
+            <ul>
+                <li class="aktif"><a href="iman.html">Beranda</a></li>
+                <li><a href="DataBencana.html">Data Bencana</a></li>
+                <li><a href="PemetaanWilayahBencana.html">Pemetaan Wilayah Bencana</a></li>
+                <li><a href="JalurEvakuasi.html">Jalur Evakuasi</a></li>
+                <li><a href="Mitigasi.html">Mitigasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Informasi -->
+    <section class="info">
+        <div class="image-container">
+            <img src="img/gambar-teks.png" alt="Informasi Kebencanaan" class="responsive-image">
+        </div>
+        <div class="info-box">
+            <h3>INFORMASI KEBENCANAAN</h3>
+            <div class="card-container">
+                <div class="card" data-name="Banjir" data-link="Banjir.html">
+                    <a href="Banjir.html">
+                        <i class="fa-solid fa-house-flood-water"></i>
+                        <h4>Banjir</h4>
+                    </a>
+                </div>
+                <div class="card" data-name="Tsunami" data-link="Tsunami.html">
+                    <a href="Tsunami.html">
+                        <i class="fa-solid fa-house-tsunami"></i>
+                        <h4>Tsunami</h4>
+                    </a>
+                </div>
+                <div class="card" data-name="Gempa Bumi" data-link="Gempa_Bumi.html">
+                    <a href="Gempa_Bumi.html">
+                        <i class="fa-solid fa-house-crack"></i>
+                        <h4>Gempa Bumi</h4>
+                    </a>
+                </div>
+                <div class="card" data-name="Puting Beliung" data-link="Puting_Beliung.html">
+                    <a href="Puting_Beliung.html">
+                        <i class="fa-solid fa-tornado"></i>
+                        <h4>Puting Beliung</h4>
+                    </a>
+                </div>
+                <div class="card" data-name="Gunung Api" data-link="Gunung_Api.html">
+                    <a href="Gunung_Api.html">
+                        <i class="fa-solid fa-volcano"></i>
+                        <h4>Gunung Api</h4>
+                    </a>
+                </div>
+                <div class="card" data-name="Tanah Longsor" data-link="Tanah_Longsor.html">
+                    <a href="Tanah_Longsor.html">
+                        <i class="fa-solid fa-hill-avalanche"></i>
+                        <h4>Tanah Longsor</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            $('.card').hover(
+                function() {
+                    $(this).css('transform', 'scale(1.05)');
+                    $(this).css('box-shadow', '0 4px 15px rgba(0, 0, 0, 0.2)');
+                },
+                function() {
+                    $(this).css('transform', 'scale(1)');
+                    $(this).css('box-shadow', 'none');
+                }
+            );
+
+            $('.card').click(function() {
+                const name = $(this).data('name');
+                alert(`Anda akan menuju halaman ${name}`);
+            });
+        });
+    </script>
+</body>
+</html>

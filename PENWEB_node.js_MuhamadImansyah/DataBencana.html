@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Bencana</title>
+    <link rel="stylesheet" href="Data_Bencana.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img class="logo" src="your-logo-url.png" alt="Logo">
+        <h1>JAWARA ALERT</h1>
+        <nav>
+            <ul>
+                <li><a href="iman.html">Beranda</a></li>
+                <li class="aktif"><a href="DataBencana.html">Data Bencana</a></li>
+                <li><a href="PemetaanWilayahBencana.html">Pemetaan Wilayah Bencana</a></li>
+                <li><a href="JalurEvakuasi.html">Jalur Evakuasi</a></li>
+                <li><a href="Mitigasi.html">Mitigasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Informasi Bencana -->
+    <main class="container">
+        <section class="data-section">
+            <div class="card">
+                <h2>Jumlah Per Jenis Kejadian Bencana Banten</h2>
+                <div class="data-list">
+                    <div class="data-item" data-name="Banjir" data-value="21">
+                        <span>Banjir</span> <span class="value">21</span>
+                    </div>
+                    <div class="data-item" data-name="Puting Beliung" data-value="0">
+                        <span>Puting Beliung</span> <span class="value">0</span>
+                    </div>
+                    <div class="data-item" data-name="Tanah Longsor" data-value="2">
+                        <span>Tanah Longsor</span> <span class="value">2</span>
+                    </div>
+                    <div class="data-item" data-name="Karhutla" data-value="0">
+                        <span>Karhutla</span> <span class="value">0</span>
+                    </div>
+                    <div class="data-item" data-name="Gempabumi" data-value="1">
+                        <span>Gempabumi</span> <span class="value">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Dampak Bencana Alam Periode 2024</h2>
+                <div class="impact">
+                    <div class="impact-item">
+                        <p>0 Meninggal</p>
+                        <p>27.089 Menderita dan Mengungsi</p>
+                    </div>
+                    <div class="impact-item">
+                        <p>0 Hilang</p>
+                        <p>0 Luka-luka</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Dampak Kerusakan Bencana Alam</h2>
+                <div class="damage">
+                    <div class="left">
+                        <p><strong>310</strong> Total Rumah Rusak</p>
+                        <p><strong>14</strong> Rusak Ringan</p>
+                        <p><strong>5</strong> Rusak Sedang</p>
+                        <p><strong>291</strong> Rusak Berat</p>
+                    </div>
+                    <div class="right">
+                        <p><strong>1</strong> Total Fasilitas Rusak</p>
+                        <p><strong>1</strong> Satuan Pendidikan</p>
+                        <p><strong>0</strong> Rumah Ibadah</p>
+                        <p><strong>0</strong> Fasilitas Kesehatan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        $(document).ready(function() {
+            $('.data-item').hover(
+                function() {
+                    $(this).css('background-color', '#e0f7fa');
+                },
+                function() {
+                    $(this).css('background-color', 'white');
+                }
+            );
+
+            $('.data-item').click(function() {
+                const name = $(this).data('name');
+                const value = $(this).data('value');
+                alert(`Detail ${name}: ${value} kejadian`);
+            });
+        });
+    </script>
+</body>
+</html>

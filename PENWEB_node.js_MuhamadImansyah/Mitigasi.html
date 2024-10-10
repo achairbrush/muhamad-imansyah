@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitigasi</title>
+    <link rel="stylesheet" href="Mitigasi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <ul class="social-links">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <img class="logo" src="your-logo-url.png" alt="Logo">
+            <h1>JAWARA ALERT</h1>
+            <nav>
+                <ul>
+                    <li><a href="disal_banten.html">Beranda</a></li>
+                    <li><a href="DataBencana.html">Data Bencana</a></li>
+                    <li><a href="PemetaanWilayahBencana.html">Pemetaan Wilayah Bencana</a></li>
+                    <li><a href="JalurEvakuasi.html">Jalur Evakuasi</a></li>
+                    <li class="active"><a href="Mitigasi.html">Mitigasi</a>
+                        <ul class="dropdown">
+                            <li><a href="MitigasiBanjir.html">Banjir</a></li>
+                            <li><a href="MitigasiGempa.html">Gempa Bumi</a></li>
+                            <li><a href="MitigasiPutingBeliung.html">Puting Beliung</a></li>
+                            <li><a href="MitigasiTanahLongsor.html">Tanah Longsor</a></li>
+                            <li><a href="MitigasiGunungApi.html">Gunung Api</a></li>
+                            <li><a href="MitigasiTsunami.html">Tsunami</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Mitigasi -->
+    <section class="mitigasi-section">
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="mp4/VIDEO DRONE BANTEN LAMA - KERATON SUROSOWAN.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="content">
+            <h2>Selamat Datang di Halaman Mitigasi</h2>
+            <p>Terima kasih telah mengunjungi halaman kami! Kami berharap informasi yang disediakan dapat membantu Anda dalam memahami pemetaan bencana alam di Provinsi Banten serta cara mitigasinya. Jika Anda memiliki pertanyaan lebih lanjut, jangan ragu untuk menghubungi kami. Tim dukungan kami selalu siap membantu.</p>
+        </div>
+        <div class="contact-info">
+            <div class="logo-container">
+                <img class="logo-mitigasi" src="your-logo-url.png" alt="Logo Mitigasi">
+                <h3>JAWARA ALERT</h3>
+                <h4>UNIVERSITAS PENDIDIKAN INDONESIA</h4>
+                <p>Jl. Ciracas No.38, Serang, Kec. Serang,<br>Kota Serang, Banten 42116</p>
+                <p>Telp: (+62254) 200277</p>
+                <p>Email: <a href="mailto:resmiupiserang@gmail.com">resmiupiserang@gmail.com</a></p>
+            </div>
+            <div class="team-info">
+                <h5>Tim Kami:</h5>
+                <div class="team-member">
+                    <img src="img/profile-removebg-preview.png" alt="Member 1">
+                    <p>MUHAMAD IMANSYAH - 2308258</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <h5>Ikuti Kami:</h5>
+                <a href="https://www.instagram.com/ffxxzzss_?igsh=MXhyOXhqc25vbWFuaQ=="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/muhamad.imannn_?igsh=eXA2YmxjYmxlZ2I4"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            // Interaktif efek hover untuk tim anggota
+            $('.team-member img').hover(
+                function() {
+                    $(this).css('transform', 'scale(1.1)');
+                },
+                function() {
+                    $(this).css('transform', 'scale(1)');
+                }
+            );
+        });
+    </script>
+</body>
+</html>
