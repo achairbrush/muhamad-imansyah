@@ -94,10 +94,6 @@ CREATE TABLE lecturer_supervisions (
     FOREIGN KEY (supervisor_id) REFERENCES lecturers(lect_id)
 );
 
--- ============================================
--- BAGIAN 3: DML (Data Manipulation Language)
--- Mengisi Data ke Tabel
--- ============================================
 
 INSERT INTO departments VALUES
 (10,'Bisnis Intelejen'), 
@@ -401,4 +397,5 @@ INNER JOIN schedules sc2 ON sc1.room_id = sc2.room_id
                          AND sc1.class_id < sc2.class_id
 INNER JOIN rooms r ON sc1.room_id = r.room_id
 WHERE (sc1.start_time < sc2.end_time AND sc1.end_time > sc2.start_time);
+
 
